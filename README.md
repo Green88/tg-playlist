@@ -1,7 +1,6 @@
 # tg-playlist
 creating playlists from sc tracks. learn-only project.
 will include:
-1. login with sc
-2. search
-3. playing tracks
-4. creating and storing playlists
+1. search
+2. playing tracks
+3. creating, storing and playing playlists
