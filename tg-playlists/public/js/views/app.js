@@ -14,12 +14,14 @@ app.AppView = Backbone.View.extend({
         this.$search = this.$('#search');
         this.$tracksList = this.$('#tracksList');
 
-        this.limit = 10;
+        this.limit = 5;
         this.offset = 0;
         this.query = '';
         
         this.listenTo(app.Tracks, 'add', this.addTracks);
         this.listenTo(app.Tracks, 'change:showPlayer', this.loadPlayer);
+        
+        this.playlistsView = new app.PlaylistsListView();
     },
     keyValidator_: new RegExp('^[a-zA-Z0-9\b]+$'),
 
@@ -51,7 +53,7 @@ app.AppView = Backbone.View.extend({
                         id: track.id,
                         title: track.title,
                         permalinkUrl: track.permalink_url,
-                        imageUrl: track.artwork_url
+                        imageUrl: track.artwork_url || DEFAULT_IMAGE
                     })
                 });
                 app.Tracks.add(tracks);
@@ -74,7 +76,7 @@ app.AppView = Backbone.View.extend({
         this.$tracksList.append( view.render().el );
     },
     renderLoadMore: function() {
-        this.$tracksList.append( this.loadMoreTemplate);
+        this.$tracksList.append(this.loadMoreTemplate);
     },
     loadPlayer: function(track) {
         console.log(track);

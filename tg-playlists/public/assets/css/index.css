@@ -14,8 +14,25 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-.panels {
+.app-view {
+    display: flex;
+    flex-direction: column;
+}
+
+.panels, .view{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer {
     width: auto;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #777777;
+
 }
 
 .searchWrapper, .playlistWrapper, .scPlayerWrapper {
@@ -30,4 +47,6 @@ body {
 
 #tracksList {
     list-style: none;
+    margin-left: 0;
+    padding-left: 0;
 }

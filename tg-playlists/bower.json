@@ -1,0 +1,19 @@
+{
+  "name": "tg-playlist",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Green88/tg-playlist",
+  "authors": [
+    "Tania Grinberg"
+  ],
+  "license": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "uuid": "https://github.com/broofa/node-uuid.git"
+  }
+}

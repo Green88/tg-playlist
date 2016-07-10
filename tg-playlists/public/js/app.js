@@ -3,6 +3,8 @@
  */
 var app = app || {};
 var ENTER_KEY = 13;
+var DEFAULT_IMAGE = "../assets/img/soundcloud-logo.png";
+
 $(function() {
     SC.initialize({
         client_id: '84c8787a2bd5c45dfa372c11e73958b1'
