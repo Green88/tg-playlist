@@ -17,6 +17,7 @@ var uuid = require('node-uuid');
 var app = express();
 
 //Connect to database
+// to run mongo on win: find mongod.exe and run it
 mongoose.connect('mongodb://127.0.0.1/playlist_database');
 
 //Schemas

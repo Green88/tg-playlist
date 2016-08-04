@@ -22,6 +22,7 @@ app.AppView = Backbone.View.extend({
         this.listenTo(app.Tracks, 'change:showPlayer', this.loadPlayer);
         
         this.playlistsView = new app.PlaylistsListView();
+        this.footerView = new app.FooterView();
     },
     keyValidator_: new RegExp('^[a-zA-Z0-9\b]+$'),
 
